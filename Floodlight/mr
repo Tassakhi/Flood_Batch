@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<mapreduce>
+    <map name="anagram">
+        <tasktype>Bandwidth oriented</tasktype>
+        <input>250</input>
+        <mappers>4000</mappers>
+        <shuffle>49</shuffle>
+        <reducer>180</reducer>
+        <bmi>1</bmi>
+        <bmo>1</bmo>
+        <bri>1</bri>
+        <bro>1</bro>
+        <cpu>10</cpu>
+        <ouput>25</ouput>
+    </map>
+
+    <map name="terasort">
+        <tasktype>Bandwidth oriented</tasktype>
+        <input>300</input>
+        <mappers>4800</mappers>
+        <shuffle>300</shuffle>
+        <reducer>180</reducer>
+        <bmi>1</bmi>
+        <bmo>1</bmo>
+        <bri>1</bri>
+        <bro>1</bro>
+        <cpu>11</cpu>
+        <ouput>50</ouput>
+    </map>
+
+    <map name="selfjoin">
+        <tasktype>Latency oriented</tasktype>
+        <input>250</input>
+        <mappers>4000</mappers>
+        <shuffle>246</shuffle>
+        <reducer>180</reducer>
+        <bmi>1</bmi>
+        <bmo>1</bmo>
+        <bri>1</bri>
+        <bro>1</bro>
+        <cpu>10</cpu>
+        <ouput>30</ouput>
+    </map>
+
+</mapreduce>
