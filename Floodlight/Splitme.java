@@ -7,6 +7,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 //import java.io.RandomAccessFile;
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -57,8 +58,13 @@ public class Splitme {
             try {
                 //bytefileSize = Long.parseLong(args[2]);
 // splitFileSize = Long.parseLong(args[2]);
-                splitFileSize = 512 * 1024 * 1024;
+                splitFileSize = 512;
 //System.out.println("ByteFileSize" + mBbytefileSize);
+                long meow= filename.length();
+                System.out.print(meow);
+                //long gb= 1024 *1024*1024;
+                double intogb= meow/1073741824;
+                System.out.println("filesize :" + intogb);
                 Splitme spObj = new Splitme();
                 spObj.split("/home/tasneem/Documents/wiki50gb.tar.bz2", (long) splitFileSize);
                 spObj = null;
